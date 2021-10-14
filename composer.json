@@ -1,0 +1,28 @@
+{
+    "name": "programic/laravel-convert-case-middleware",
+    "license": "proprietary",
+    "type": "package",
+    "description": "Convert request and response keys to and from camel and snake case.",
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "Programic",
+            "email": "development@programic.com",
+            "homepage": "https://programic.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "laravel/framework": "^5.2 || ^6.0 || ^7.0 || ^8.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Programic\\LaravelConvertCaseMiddleware\\": "src/"
+        }
+    }
+}
