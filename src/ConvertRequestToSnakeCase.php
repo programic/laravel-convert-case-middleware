@@ -17,8 +17,8 @@ class ConvertRequestToSnakeCase
     public function handle(Request $request, Closure $next)
     {
         $request->replace(
-            resolve(KeyCaseConverter::class)->convert(
-                KeyCaseConverter::CASE_SNAKE,
+            resolve(CaseConverter::class)->convert(
+                CaseConverter::CASE_SNAKE,
                 $request->all()
             )
         );

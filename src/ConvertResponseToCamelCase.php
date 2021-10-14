@@ -21,8 +21,8 @@ class ConvertResponseToCamelCase
 
         if ($response instanceof JsonResponse) {
             $response->setData(
-                resolve(KeyCaseConverter::class)->convert(
-                    KeyCaseConverter::CASE_CAMEL,
+                resolve(CaseConverter::class)->convert(
+                    CaseConverter::CASE_CAMEL,
                     json_decode($response->content(), true)
                 )
             );
