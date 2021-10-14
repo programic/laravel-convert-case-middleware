@@ -16,12 +16,12 @@ class ConvertRequestToSnakeCase
      */
     public function handle(Request $request, Closure $next)
     {
-        $request->replace(
-            resolve(CaseConverter::class)->convert(
-                CaseConverter::CASE_SNAKE,
-                $request->all()
-            )
+        $converted = resolve(CaseConverter::class)->convert(
+            CaseConverter::CASE_SNAKE,
+            $request->all()
         );
+
+        $request->replace($converted);
 
         return $next($request);
     }

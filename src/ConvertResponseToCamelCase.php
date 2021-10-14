@@ -20,12 +20,12 @@ class ConvertResponseToCamelCase
         $response = $next($request);
 
         if ($response instanceof JsonResponse) {
-            $response->setData(
-                resolve(CaseConverter::class)->convert(
-                    CaseConverter::CASE_CAMEL,
-                    json_decode($response->content(), true)
-                )
+            $converted = resolve(CaseConverter::class)->convert(
+                CaseConverter::CASE_CAMEL,
+                json_decode($response->content(), true)
             );
+
+            $response->setData($converted);
         }
 
         return $response;

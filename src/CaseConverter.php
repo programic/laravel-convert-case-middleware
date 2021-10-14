@@ -9,22 +9,29 @@ class CaseConverter
 {
     public const CASE_SNAKE = 'snake';
     public const CASE_CAMEL = 'camel';
+    public const CASE_KEBAB = 'kebab';
+    public const CASE_STUDLY = 'studly';
+
+    private $arguments = [
+        self::CASE_SNAKE,
+        self::CASE_CAMEL,
+        self::CASE_KEBAB,
+        self::CASE_STUDLY,
+    ];
 
     /**
      * Convert an array to a given case.
      *
      * @param string $case
-     * @param $data
+     * @param array $data
      * @return array
      */
-    public function convert(string $case, $data)
+    public function convert(string $case, array $data): array
     {
-        if (!in_array($case, [self::CASE_CAMEL, self::CASE_SNAKE])) {
-            throw new InvalidArgumentException('Case must be either snake or camel');
-        }
-
-        if (!is_array($data)) {
-            return $data;
+        if (!in_array($case, $this->arguments)) {
+            throw new InvalidArgumentException(
+                'Case unknown, possible casing: ' . implode(',', $this->arguments)
+            );
         }
 
         $array = [];
@@ -36,6 +43,5 @@ class CaseConverter
         }
 
         return $array;
-
     }
 }
