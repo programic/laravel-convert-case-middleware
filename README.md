@@ -1,6 +1,7 @@
 # Programic - Laravel Convert Case Middleware
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/programic/laravel-convert-case-middleware.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-convert-case-middleware)
+[![Tests](https://github.com/programic/laravel-convert-case-middleware/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/programic/laravel-convert-case-middleware/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/programic/laravel-convert-case-middleware.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-convert-case-middleware)
 
 Convert requests from camel case to snake case. Convert responses from snake case to camel case.
