@@ -2,12 +2,7 @@
 
 namespace Programic\LaravelConvertCaseMiddleware\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
-
-abstract class TestCase extends Orchestra
+abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
-    public function setUp(): void
-    {
-        parent::setUp();
-    }
+    //
 }

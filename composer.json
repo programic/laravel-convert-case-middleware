@@ -18,7 +18,8 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.1 || ^8.0"
+        "orchestra/testbench": "^7.1 || ^8.0",
+        "phpunit/phpunit": "^8.5.23 || ^9.5.10"
     },
     "autoload": {
         "psr-4": {
@@ -33,7 +34,7 @@
     "minimum-stability": "dev",
     "scripts": {
         "test": [
-            "vendor/bin/phpunit"
+            "vendor/bin/phpunit tests"
         ]
     }
 }
